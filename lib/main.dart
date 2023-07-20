@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'navbar/navbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +25,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.centerLeft,
@@ -35,7 +37,7 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
         child: Column(
-          children: [],
+          children: [Navbar()],
         ),
       ),
     );
