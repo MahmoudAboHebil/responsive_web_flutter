@@ -84,6 +84,50 @@ class DesktopNavbar extends StatelessWidget {
 class MobileNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(
+            'AbuHebil Studio',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 30,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Home',
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Text(
+                  'About Us',
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Text(
+                  'Portfolio',
+                  style: TextStyle(color: Colors.white),
+                ),
+                // SizedBox(
+                //   width: 30,
+                // ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
