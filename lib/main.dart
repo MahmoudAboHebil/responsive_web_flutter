@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_website/landingPage/landingPage.dart';
 import 'navbar/navbar.dart';
 
 void main() {
@@ -38,7 +39,7 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
         child: Column(
-          children: [Navbar()],
+          children: [Navbar(), LandingPage()],
         ),
       ),
     );
