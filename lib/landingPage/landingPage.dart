@@ -58,9 +58,16 @@ class _LandingPageState extends State<LandingPage> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        return Column(
-          children: pageChildren(constraints.biggest.width),
-        );
+        if (constraints.maxWidth > 800) {
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: pageChildren(constraints.biggest.width / 2),
+          );
+        } else {
+          return Column(
+            children: pageChildren(constraints.biggest.width),
+          );
+        }
       },
     );
   }
